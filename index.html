@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+        content="Eylül Sena Özdemir'in akademik ve dijital portfolyosu.">
+  <title>Eylül Sena | Academic Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <!-- Üst menü -->
+  <header class="site-header">
+    <nav class="navbar" aria-label="Ana menü">
+      <a href="index.html" class="logo">
+        Eylül Sena
+      </a>
+
+      <button class="menu-toggle" type="button"
+              aria-label="Menüyü aç"
+              aria-expanded="false"
+              aria-controls="nav-links">
+        ☰
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" aria-current="page"
+               data-tr="Ana Sayfa" data-en="Home">Ana Sayfa</a></li>
+        <li><a href="about.html"
+               data-tr="Hakkımda" data-en="About">Hakkımda</a></li>
+        <li><a href="projects.html"
+               data-tr="Projeler" data-en="Projects">Projeler</a></li>
+        <li><a href="contact.html"
+               data-tr="İletişim" data-en="Contact">İletişim</a></li>
+      </ul>
+
+      <div class="header-actions">
+        <button id="language-toggle" type="button"
+                aria-label="Switch to English">EN</button>
+        <button id="theme-toggle" type="button"
+                aria-label="Karanlık modu aç">☾</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Ana tanıtım -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <p class="eyebrow"
+           data-tr="ECZACILIK • TEKNOLOJİ • İNOVASYON"
+           data-en="PHARMACY • TECHNOLOGY • INNOVATION">
+          ECZACILIK • TEKNOLOJİ • İNOVASYON
+        </p>
+
+        <h1 id="hero-title"
+            data-tr="Merhaba, ben Eylül Sena!"
+            data-en="Hello, I'm Eylül Sena!">
+          Merhaba, ben Eylül Sena!
+        </h1>
+
+        <h2 data-tr="Bahçeşehir Üniversitesi Eczacılık Öğrencisi"
+            data-en="Pharmacy Student at Bahçeşehir University">
+          Bahçeşehir Üniversitesi Eczacılık Öğrencisi
+        </h2>
+
+        <p data-tr="Eczacılık bilimleri, farmasötik teknoloji, yapay zekâ ve dijital inovasyon alanlarına ilgi duyuyorum. Bu portfolyoda akademik yolculuğumu ve kodlama projelerimi paylaşıyorum."
+           data-en="I am interested in pharmaceutical sciences, pharmaceutical technology, artificial intelligence, and digital innovation. This portfolio showcases my academic journey and coding projects.">
+          Eczacılık bilimleri, farmasötik teknoloji,
+          yapay zekâ ve dijital inovasyon alanlarına
+          ilgi duyuyorum. Bu portfolyoda akademik
+          yolculuğumu ve kodlama projelerimi paylaşıyorum.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="projects.html" class="btn btn-primary"
+             data-tr="Projelerimi İncele"
+             data-en="Explore My Projects">
+            Projelerimi İncele
+          </a>
+          <a href="about.html" class="btn btn-outline"
+             data-tr="Hakkımda Daha Fazla"
+             data-en="More About Me">
+            Hakkımda Daha Fazla
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-avatar">
+        <div class="avatar-placeholder" role="img"
+             aria-label="Eylül Sena için profil avatarı">
+          ES
+        </div>
+      </div>
+    </section>
+
+    <!-- İlgi alanları -->
+    <section class="interests" aria-labelledby="interests-title">
+      <h2 id="interests-title"
+          data-tr="İlgi Alanlarım"
+          data-en="My Areas of Interest">
+        İlgi Alanlarım
+      </h2>
+
+      <div class="interest-grid">
+        <article class="interest-card">
+          <h3 data-tr="Eczacılık" data-en="Pharmacy">Eczacılık</h3>
+          <p data-tr="Farmasötik bilimler ve ilaç geliştirme."
+             data-en="Pharmaceutical sciences and drug development.">
+            Farmasötik bilimler ve ilaç geliştirme.
+          </p>
+        </article>
+
+        <article class="interest-card">
+          <h3 data-tr="Kodlama" data-en="Coding">Kodlama</h3>
+          <p data-tr="HTML, CSS, JavaScript ve dijital projeler."
+             data-en="HTML, CSS, JavaScript, and digital projects.">
+            HTML, CSS, JavaScript ve dijital projeler.
+          </p>
+        </article>
+
+        <article class="interest-card">
+          <h3 data-tr="Yapay Zekâ" data-en="Artificial Intelligence">
+            Yapay Zekâ
+          </h3>
+          <p data-tr="Sağlık ve eğitimde yapay zekâ uygulamaları."
+             data-en="AI applications in healthcare and education.">
+            Sağlık ve eğitimde yapay zekâ uygulamaları.
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Eylül Sena Özdemir</p>
+    <a href="https://github.com/eyllozdemir"
+       target="_blank" rel="noopener noreferrer">
+      GitHub
+    </a>
+  </footer>
+</body>
+</html>
