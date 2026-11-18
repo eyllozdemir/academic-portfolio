@@ -204,3 +204,87 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 });
+
+/* PROJECT SEARCH AND FILTER */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const searchInput =
+    document.getElementById("project-search");
+
+  const categoryFilter =
+    document.getElementById("project-filter");
+
+  const projectCards =
+    document.querySelectorAll(".project-card");
+
+  const feedback =
+    document.getElementById("project-feedback");
+
+  if (!searchInput || !categoryFilter) return;
+
+  function filterProjects() {
+
+    const searchTerm =
+      searchInput.value.toLocaleLowerCase("tr").trim();
+
+    const selectedCategory =
+      categoryFilter.value;
+
+    let visibleCount = 0;
+
+    projectCards.forEach(function (card) {
+
+      const projectText =
+        card.textContent.toLocaleLowerCase("tr") + " " +
+        (card.dataset.search || "").toLocaleLowerCase("tr");
+
+      const category = card.dataset.category;
+
+      const matchesSearch =
+        projectText.includes(searchTerm);
+
+      const matchesCategory =
+        selectedCategory === "all" ||
+        category === selectedCategory;
+
+      const showCard =
+        matchesSearch && matchesCategory;
+
+      card.hidden = !showCard;
+
+      if (showCard) visibleCount++;
+    });
+
+    const language =
+      document.documentElement.lang;
+
+    if (feedback) {
+      feedback.textContent =
+        language === "en"
+          ? visibleCount + " project(s) found."
+          : visibleCount + " proje bulundu.";
+    }
+  }
+
+  searchInput.addEventListener("input", filterProjects);
+
+  categoryFilter.addEventListener(
+    "change",
+    filterProjects
+  );
+
+  // Dil degistirildiginde sonucu da guncelle
+  const languageButton =
+    document.getElementById("language-toggle");
+
+  if (languageButton) {
+    languageButton.addEventListener(
+      "click",
+      filterProjects
+    );
+  }
+
+  filterProjects();
+
+});
