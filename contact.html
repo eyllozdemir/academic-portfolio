@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+        content="Eylül Sena Özdemir - İletişim sayfası.">
+
+  <title>Contact | Eylül Sena</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <nav class="navbar" aria-label="Ana menü">
+
+      <a href="index.html" class="logo">Eylül Sena</a>
+
+      <button class="menu-toggle" type="button"
+              aria-label="Menüyü aç"
+              aria-expanded="false"
+              aria-controls="nav-links">☰</button>
+
+      <ul class="nav-links" id="nav-links">
+
+        <li>
+          <a href="index.html"
+             data-tr="Ana Sayfa" data-en="Home">
+            Ana Sayfa
+          </a>
+        </li>
+
+        <li>
+          <a href="about.html"
+             data-tr="Hakkımda" data-en="About">
+            Hakkımda
+          </a>
+        </li>
+
+        <li>
+          <a href="projects.html"
+             data-tr="Projeler" data-en="Projects">
+            Projeler
+          </a>
+        </li>
+
+        <li>
+          <a href="contact.html" aria-current="page"
+             data-tr="İletişim" data-en="Contact">
+            İletişim
+          </a>
+        </li>
+
+      </ul>
+
+      <div class="header-actions">
+        <button id="language-toggle" type="button"
+                aria-label="Switch to English">EN</button>
+
+        <button id="theme-toggle" type="button"
+                aria-label="Karanlık modu aç">☾</button>
+      </div>
+
+    </nav>
+  </header>
+
+
+  <main>
+
+    <section class="about-banner">
+      <h1 data-tr="İletişim" data-en="Contact Me">
+        İletişim
+      </h1>
+
+      <p data-tr="Benimle bağlantı kurun"
+         data-en="Let's Connect">
+        Benimle bağlantı kurun
+      </p>
+    </section>
+
+
+    <section class="contact-container"
+             aria-labelledby="contact-heading">
+
+      <h2 id="contact-heading"
+          data-tr="Mesajınızı Kontrol Edin"
+          data-en="Check Your Message">
+        Mesajınızı Kontrol Edin
+      </h2>
+
+      <p data-tr="Bu form, doğrulama özelliklerini göstermek için hazırlanmış bir demodur. Mesajlar gönderilmez."
+         data-en="This form demonstrates validation features. Messages are not sent.">
+        Bu form, doğrulama özelliklerini
+        göstermek için hazırlanmış bir demodur.
+        Mesajlar gönderilmez.
+      </p>
+
+      <form id="contact-form" novalidate>
+
+        <div class="form-group">
+          <label for="contact-name"
+                 data-tr="Ad Soyad"
+                 data-en="Full Name">
+            Ad Soyad
+          </label>
+
+          <input id="contact-name"
+                 name="name"
+                 type="text"
+                 autocomplete="name"
+                 maxlength="100"
+                 required
+                 aria-describedby="name-error">
+
+          <span id="name-error"
+                class="form-error"></span>
+        </div>
+
+
+        <div class="form-group">
+          <label for="contact-email"
+                 data-tr="E-posta"
+                 data-en="Email Address">
+            E-posta
+          </label>
+
+          <input id="contact-email"
+                 name="email"
+                 type="email"
+                 autocomplete="email"
+                 maxlength="254"
+                 required
+                 aria-describedby="email-error">
+
+          <span id="email-error"
+                class="form-error"></span>
+        </div>
+
+
+        <div class="form-group">
+          <label for="contact-message"
+                 data-tr="Mesaj"
+                 data-en="Message">
+            Mesaj
+          </label>
+
+          <textarea id="contact-message"
+                    name="message"
+                    rows="6"
+                    minlength="10"
+                    maxlength="1000"
+                    required
+                    aria-describedby="message-error"></textarea>
+
+          <span id="message-error"
+                class="form-error"></span>
+        </div>
+
+
+        <button type="submit" class="btn btn-primary"
+                data-tr="Mesajı Kontrol Et"
+                data-en="Validate Message">
+          Mesajı Kontrol Et
+        </button>
+
+        <p id="form-status"
+           role="status"
+           aria-live="polite"></p>
+
+      </form>
+
+
+      <div class="privacy-note">
+        <h3 data-tr="Gizlilik Bilgilendirmesi"
+            data-en="Privacy Notice">
+          Gizlilik Bilgilendirmesi
+        </h3>
+
+        <p data-tr="Bu form yalnızca eğitim ve gösterim amacıyla hazırlanmıştır. Girilen ad, e-posta ve mesaj bilgileri herhangi bir sunucuya gönderilmez veya kalıcı olarak saklanmaz. Lütfen hassas kişisel bilgiler paylaşmayın."
+           data-en="This form is for educational demonstration only. Names, email addresses, and messages are not transmitted to a server or permanently stored. Please do not enter sensitive personal information.">
+          Bu form yalnızca eğitim ve gösterim
+          amacıyla hazırlanmıştır. Girilen ad,
+          e-posta ve mesaj bilgileri herhangi
+          bir sunucuya gönderilmez veya kalıcı
+          olarak saklanmaz. Lütfen hassas
+          kişisel bilgiler paylaşmayın.
+        </p>
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer class="site-footer">
+    <p>© 2026 Eylül Sena Özdemir</p>
+
+    <a href="https://github.com/eyllozdemir"
+       target="_blank"
+       rel="noopener noreferrer">
+      GitHub
+    </a>
+  </footer>
+
+</body>
+</html>
