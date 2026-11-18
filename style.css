@@ -483,3 +483,132 @@ body.dark-mode .interests h2 {
 body.dark-mode .interest-card h3 {
   color: #B8D9FF;
 }
+
+/* ==========================================
+   ABOUT ME PAGE
+   ========================================== */
+
+.about-banner {
+  background: linear-gradient(135deg, #102744, #244F7B);
+  color: #FFFFFF;
+  text-align: center;
+  padding: 75px 20px;
+}
+
+.about-banner h1 {
+  font-size: 2.7rem;
+  margin: 0 0 12px;
+}
+
+.about-banner p {
+  color: #DCE9F8;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.about-container {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 55px 24px;
+}
+
+.about-intro,
+.about-section {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 32px;
+  margin-bottom: 24px;
+  box-shadow: 0 5px 18px rgba(16, 39, 68, 0.05);
+}
+
+.about-intro {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.about-avatar {
+  width: 130px;
+  height: 130px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #EAF1F8;
+  color: #102744;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.7rem;
+  font-weight: 700;
+}
+
+.about-intro h2,
+.about-section h2 {
+  color: var(--blue);
+  margin-top: 0;
+}
+
+.about-intro h3 {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.about-section h3 {
+  color: var(--text);
+}
+
+.about-section p,
+.about-intro p {
+  line-height: 1.8;
+}
+
+.about-section ul {
+  padding-left: 24px;
+}
+
+.about-section li {
+  margin-bottom: 12px;
+}
+
+/* Dark mode support */
+
+body.dark-mode .about-intro h2,
+body.dark-mode .about-section h2 {
+  color: #B8D9FF;
+}
+
+/* Tablet */
+
+@media (max-width: 1024px) {
+  .about-container {
+    padding: 40px 24px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .about-banner {
+    padding: 55px 20px;
+  }
+
+  .about-banner h1 {
+    font-size: 2rem;
+  }
+
+  .about-intro {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-intro,
+  .about-section {
+    padding: 24px;
+  }
+
+  .about-avatar {
+    width: 110px;
+    height: 110px;
+    font-size: 2.2rem;
+  }
+}
