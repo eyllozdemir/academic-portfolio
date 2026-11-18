@@ -288,3 +288,160 @@ document.addEventListener("DOMContentLoaded", function () {
   filterProjects();
 
 });
+
+/* ==========================================
+   CONTACT FORM VALIDATION
+   ========================================== */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const form = document.getElementById("contact-form");
+
+  if (!form) return;
+
+  const nameInput =
+    document.getElementById("contact-name");
+
+  const emailInput =
+    document.getElementById("contact-email");
+
+  const messageInput =
+    document.getElementById("contact-message");
+
+  const status =
+    document.getElementById("form-status");
+
+
+  function currentLanguage() {
+    return document.documentElement.lang === "en"
+      ? "en"
+      : "tr";
+  }
+
+
+  function showError(input, errorId, tr, en) {
+
+    const errorElement =
+      document.getElementById(errorId);
+
+    input.setAttribute("aria-invalid", "true");
+
+    errorElement.textContent =
+      currentLanguage() === "en" ? en : tr;
+
+    return false;
+  }
+
+
+  function clearError(input, errorId) {
+
+    input.removeAttribute("aria-invalid");
+
+    document.getElementById(errorId).textContent = "";
+  }
+
+
+  function validateName() {
+
+    const value = nameInput.value.trim();
+
+    if (value.length < 2) {
+      return showError(
+        nameInput,
+        "name-error",
+        "Lütfen en az 2 karakterlik bir ad girin.",
+        "Please enter a name with at least 2 characters."
+      );
+    }
+
+    clearError(nameInput, "name-error");
+    return true;
+  }
+
+
+  function validateEmail() {
+
+    const value = emailInput.value.trim();
+
+    if (!emailInput.validity.valid ||
+        !value.includes("@")) {
+
+      return showError(
+        emailInput,
+        "email-error",
+        "Lütfen geçerli bir e-posta adresi girin.",
+        "Please enter a valid email address."
+      );
+    }
+
+    clearError(emailInput, "email-error");
+    return true;
+  }
+
+
+  function validateMessage() {
+
+    const value = messageInput.value.trim();
+
+    if (value.length < 10) {
+
+      return showError(
+        messageInput,
+        "message-error",
+        "Mesajınız en az 10 karakter olmalıdır.",
+        "Your message must contain at least 10 characters."
+      );
+    }
+
+    clearError(messageInput, "message-error");
+    return true;
+  }
+
+
+  // Form gonderim denemesini yakala
+  form.addEventListener("submit", function (event) {
+
+    // Sayfa yenilenmesini ve gercek gonderimi engelle
+    event.preventDefault();
+
+    const validName = validateName();
+    const validEmail = validateEmail();
+    const validMessage = validateMessage();
+
+    if (validName && validEmail && validMessage) {
+
+      status.textContent =
+        currentLanguage() === "en"
+          ? "Validation successful! This is a demo; your message was not sent."
+          : "Doğrulama başarılı! Bu bir demodur; mesajınız gönderilmedi.";
+
+    } else {
+
+      status.textContent =
+        currentLanguage() === "en"
+          ? "Please correct the highlighted fields."
+          : "Lütfen hatalı alanları düzeltin.";
+
+      const firstInvalid =
+        form.querySelector('[aria-invalid="true"]');
+
+      if (firstInvalid) {
+        firstInvalid.focus();
+      }
+    }
+
+  });
+
+
+  // Kullanici alanlari duzelttiginde hatalari kontrol et
+  nameInput.addEventListener("blur", validateName);
+  emailInput.addEventListener("blur", validateEmail);
+  messageInput.addEventListener("blur", validateMessage);
+
+
+  // Form degistiginde eski durum mesajini temizle
+  form.addEventListener("input", function () {
+    status.textContent = "";
+  });
+
+});
