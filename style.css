@@ -1,0 +1,485 @@
+
+/* ==========================================
+   EYLUL SENA - ACADEMIC PORTFOLIO
+   Main Stylesheet
+   ========================================== */
+
+/* 1. RENKLER VE TEMEL AYARLAR */
+
+:root {
+  --navy: #102744;
+  --blue: #244F7B;
+  --light-blue: #EAF1F8;
+  --white: #FFFFFF;
+  --background: #F4F7FB;
+  --text: #26364A;
+  --muted: #52657B;
+  --border: #DCE5EF;
+  --card: #FFFFFF;
+  --focus: #F3B544;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.7;
+  color: var(--text);
+  background-color: var(--background);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 2. ERISILEBILIRLIK */
+
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 4px;
+}
+
+/* 3. UST MENU */
+
+.site-header {
+  background-color: var(--navy);
+  color: var(--white);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a[aria-current="page"] {
+  color: #B8D9FF;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-actions button,
+.menu-toggle {
+  background: transparent;
+  color: var(--white);
+  border: 1px solid #AFC3DA;
+  border-radius: 8px;
+  padding: 7px 12px;
+}
+
+.header-actions button:hover,
+.menu-toggle:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.menu-toggle {
+  display: none;
+}
+
+/* 4. ANA TANITIM ALANI */
+
+.hero {
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 80px max(24px, calc((100vw - 1152px) / 2));
+  background: linear-gradient(
+    135deg,
+    #102744 0%,
+    #244F7B 100%
+  );
+  color: var(--white);
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 670px;
+}
+
+.eyebrow {
+  color: #C3E0FF;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 5vw, 3.7rem);
+  line-height: 1.2;
+  margin: 16px 0;
+}
+
+.hero h2 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #DCE9F8;
+}
+
+.hero-content > p:not(.eyebrow) {
+  font-size: 1.05rem;
+  color: #E2ECF7;
+  max-width: 600px;
+  margin-top: 24px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 32px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 700;
+  text-align: center;
+  transition: transform 0.2s ease,
+              background-color 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+.btn-primary {
+  background: var(--white);
+  color: var(--navy);
+}
+
+.btn-primary:hover {
+  background: var(--light-blue);
+}
+
+.btn-outline {
+  border: 2px solid var(--white);
+  color: var(--white);
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* 5. PROFIL AVATARI */
+
+.hero-avatar {
+  flex: 0 0 260px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar-placeholder {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: #EAF1F8;
+  color: var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  font-weight: 700;
+  border: 8px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* 6. ILGI ALANLARI */
+
+.interests {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 24px;
+}
+
+.interests h2 {
+  text-align: center;
+  color: var(--navy);
+  font-size: 2rem;
+  margin-bottom: 36px;
+}
+
+.interest-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.interest-card {
+  background: var(--card);
+  padding: 32px 26px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  box-shadow: 0 5px 18px rgba(16, 39, 68, 0.05);
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+.interest-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(16, 39, 68, 0.12);
+}
+
+.interest-card h3 {
+  color: var(--blue);
+  margin-top: 0;
+  font-size: 1.25rem;
+}
+
+.interest-card p {
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
+/* 7. ALT BILGI */
+
+.site-footer {
+  background: var(--navy);
+  color: var(--white);
+  text-align: center;
+  padding: 28px 20px;
+}
+
+.site-footer p {
+  margin: 0 0 8px;
+}
+
+.site-footer a {
+  color: #C3E0FF;
+  text-decoration: underline;
+}
+
+.site-footer a:hover {
+  color: var(--white);
+}
+
+/* 8. TABLET TASARIMI */
+
+@media (max-width: 1024px) {
+  .navbar {
+    gap: 14px;
+  }
+
+  .nav-links {
+    gap: 14px;
+  }
+
+  .hero {
+    padding: 70px 40px;
+    gap: 30px;
+  }
+
+  .hero-avatar {
+    flex-basis: 200px;
+  }
+
+  .avatar-placeholder {
+    width: 190px;
+    height: 190px;
+    font-size: 4rem;
+  }
+
+  .interest-grid {
+    gap: 16px;
+  }
+}
+
+/* 9. MOBIL TASARIM */
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    padding: 16px 20px;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+  }
+
+  .header-actions {
+    order: 2;
+  }
+
+  .nav-links {
+    display: none;
+    order: 3;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 14px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 10px 4px;
+  }
+
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 55px 24px;
+    gap: 28px;
+  }
+
+  .hero-content {
+    width: 100%;
+  }
+
+  .hero-avatar {
+    flex: 0 0 auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .interest-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .interests {
+    padding: 55px 20px;
+  }
+
+  .interests h2 {
+    font-size: 1.7rem;
+  }
+}
+
+/* 10. KUCUK TELEFONLAR */
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.15rem;
+  }
+
+  .navbar {
+    gap: 10px;
+  }
+
+  .header-actions button {
+    padding: 6px 9px;
+  }
+
+  .hero {
+    padding: 45px 18px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .avatar-placeholder {
+    width: 160px;
+    height: 160px;
+    font-size: 3.5rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+/* 11. HAREKET HASSASIYETI */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .btn,
+  .interest-card,
+  .nav-links a {
+    transition: none;
+  }
+}
+
+/* 12. KARANLIK MOD ALTYAPISI */
+
+body.dark-mode {
+  --background: #0B1727;
+  --text: #E5EDF6;
+  --muted: #C0CDDD;
+  --border: #38506C;
+  --card: #172B44;
+}
+
+body.dark-mode .interests h2 {
+  color: #E5EDF6;
+}
+
+body.dark-mode .interest-card h3 {
+  color: #B8D9FF;
+}
