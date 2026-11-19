@@ -1,310 +1,568 @@
 
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
   <meta charset="UTF-8">
+
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
+
   <meta name="description"
-        content="Eylül Sena Özdemir'in akademik ve kodlama projeleri.">
+        content="Eylül Sena Özdemir'in akademik, eczacılık ve kodlama projeleri.">
+
   <title>Projects | Eylül Sena</title>
+
   <link rel="stylesheet" href="style.css">
+
   <script src="script.js" defer></script>
 </head>
 
 <body>
 
-  <header class="site-header">
-    <nav class="navbar" aria-label="Ana menü">
-      <a href="index.html" class="logo">Eylül Sena</a>
+  <!-- =====================================
+       HEADER AND NAVIGATION
+       ===================================== -->
 
-      <button class="menu-toggle" type="button"
-              aria-label="Menüyü aç"
-              aria-expanded="false"
-              aria-controls="nav-links">☰</button>
+  <header class="site-header">
+
+    <nav class="navbar" aria-label="Ana menü">
+
+      <a href="index.html" class="logo">
+        Eylül Sena
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Menüyü aç"
+        aria-expanded="false"
+        aria-controls="nav-links">
+        ☰
+      </button>
 
       <ul class="nav-links" id="nav-links">
-        <li><a href="index.html"
-               data-tr="Ana Sayfa" data-en="Home">Ana Sayfa</a></li>
-        <li><a href="about.html"
-               data-tr="Hakkımda" data-en="About">Hakkımda</a></li>
-        <li><a href="projects.html" aria-current="page"
-               data-tr="Projeler" data-en="Projects">Projeler</a></li>
-        <li><a href="contact.html"
-               data-tr="İletişim" data-en="Contact">İletişim</a></li>
+
+        <li>
+          <a href="index.html"
+             data-tr="Ana Sayfa"
+             data-en="Home">
+            Ana Sayfa
+          </a>
+        </li>
+
+        <li>
+          <a href="about.html"
+             data-tr="Hakkımda"
+             data-en="About">
+            Hakkımda
+          </a>
+        </li>
+
+        <li>
+          <a href="projects.html"
+             aria-current="page"
+             data-tr="Projeler"
+             data-en="Projects">
+            Projeler
+          </a>
+        </li>
+
+        <li>
+          <a href="contact.html"
+             data-tr="İletişim"
+             data-en="Contact">
+            İletişim
+          </a>
+        </li>
+
       </ul>
 
       <div class="header-actions">
-        <button id="language-toggle" type="button"
-                aria-label="Switch to English">EN</button>
-        <button id="theme-toggle" type="button"
-                aria-label="Karanlık modu aç">☾</button>
+
+        <button
+          id="language-toggle"
+          type="button"
+          aria-label="Switch to English">
+          EN
+        </button>
+
+        <button
+          id="theme-toggle"
+          type="button"
+          aria-label="Karanlık modu aç">
+          ☾
+        </button>
+
       </div>
+
     </nav>
+
   </header>
 
+
+  <!-- =====================================
+       MAIN CONTENT
+       ===================================== -->
+
   <main>
+
+    <!-- PAGE BANNER -->
+
     <section class="about-banner">
-      <h1 data-tr="Projelerim" data-en="My Projects">
+
+      <h1
+        data-tr="Projelerim"
+        data-en="My Projects">
         Projelerim
       </h1>
-      <p data-tr="Akademik çalışmalarım ve kodlama yolculuğum"
-         data-en="My academic work and coding journey">
+
+      <p
+        data-tr="Akademik çalışmalarım ve kodlama yolculuğum"
+        data-en="My academic work and coding journey">
         Akademik çalışmalarım ve kodlama yolculuğum
       </p>
+
     </section>
 
-    <section class="projects-container"
-             aria-labelledby="projects-heading">
 
-      <h2 id="projects-heading"
-          data-tr="Çalışmalarımı Keşfet"
-          data-en="Explore My Work">
+    <!-- =====================================
+         PROJECTS SECTION
+         ===================================== -->
+
+    <section
+      class="projects-container"
+      aria-labelledby="projects-heading">
+
+      <h2
+        id="projects-heading"
+        data-tr="Çalışmalarımı Keşfet"
+        data-en="Explore My Work">
         Çalışmalarımı Keşfet
       </h2>
 
+
       <!-- SEARCH AND FILTER -->
+
       <div class="project-controls">
-        <label for="project-search"
-               data-tr="Proje Ara"
-               data-en="Search Projects">Proje Ara</label>
 
-        <input type="search" id="project-search"
-               placeholder="Proje adı ara..."
-               aria-label="Proje ara">
+        <label
+          for="project-search"
+          data-tr="Proje Ara"
+          data-en="Search Projects">
+          Proje Ara
+        </label>
 
-        <label for="project-filter"
-               data-tr="Kategori"
-               data-en="Category">Kategori</label>
+        <input
+          type="search"
+          id="project-search"
+          placeholder="Proje adı ara..."
+          aria-label="Proje ara">
+
+        <label
+          for="project-filter"
+          data-tr="Kategori"
+          data-en="Category">
+          Kategori
+        </label>
 
         <select id="project-filter">
-          <option value="all"
-                  data-tr="Tüm Projeler"
-                  data-en="All Projects">Tüm Projeler</option>
-          <option value="coding"
-                  data-tr="Kodlama"
-                  data-en="Coding">Kodlama</option>
-          <option value="algorithm"
-                  data-tr="Algoritma"
-                  data-en="Algorithm">Algoritma</option>
-          <option value="web"
-                  data-tr="Web Tasarımı"
-                  data-en="Web Design">Web Tasarımı</option>
+
+          <option
+            value="all"
+            data-tr="Tüm Projeler"
+            data-en="All Projects">
+            Tüm Projeler
+          </option>
+
+          <option
+            value="coding"
+            data-tr="Kodlama"
+            data-en="Coding">
+            Kodlama
+          </option>
+
+          <option
+            value="algorithm"
+            data-tr="Algoritma"
+            data-en="Algorithm">
+            Algoritma
+          </option>
+
+          <option
+            value="web"
+            data-tr="Web Tasarımı"
+            data-en="Web Design">
+            Web Tasarımı
+          </option>
+
         </select>
+
       </div>
 
-      <p id="project-feedback" role="status"
-         aria-live="polite"></p>
+
+      <p
+        id="project-feedback"
+        role="status"
+        aria-live="polite">
+      </p>
+
+
+      <!-- =====================================
+           PROJECT CARDS
+           ===================================== -->
 
       <div class="projects-grid">
 
-        <!-- PROJECT 1 -->
-        <article class="project-card" data-category="coding"
-                 data-search="pharmadose pharmacy coding eczacılık kodlama">
 
-          <div class="project-image" role="img"
-               aria-label="PharmaDose proje simgesi">
+        <!-- =================================
+             PROJECT 1 - PHARMADOSE
+             ================================= -->
+
+        <article
+          class="project-card"
+          data-category="coding"
+          data-search="pharmadose pharmacy coding eczacılık kodlama">
+
+          <div
+            class="project-image"
+            role="img"
+            aria-label="PharmaDose proje simgesi">
+
             <span aria-hidden="true">💊</span>
+
           </div>
 
+
           <div class="project-content">
+
             <h3>PharmaDose</h3>
 
-            <p data-tr="Eczacılık ve kodlama alanlarını birleştiren ders projem."
-               data-en="My coursework project combining pharmacy and coding.">
+            <p
+              data-tr="Eczacılık ve kodlama alanlarını birleştiren, yapay zekâ desteğiyle geliştirdiğim akademik yazılım projesi."
+              data-en="An academic software project combining pharmacy and coding, developed with AI assistance.">
+
               Eczacılık ve kodlama alanlarını
-              birleştiren ders projem.
+              birleştiren, yapay zekâ desteğiyle
+              geliştirdiğim akademik yazılım projesi.
+
             </p>
 
-            <h4 data-tr="Ne Öğrendim?"
-                data-en="What I Learned">
+
+            <h4
+              data-tr="Ne Öğrendim?"
+              data-en="What I Learned">
               Ne Öğrendim?
             </h4>
 
-            <p data-tr="Bir yazılım projesini planlamayı, yapay zekâ desteğiyle geliştirmeyi ve GitHub üzerinden belgelemeyi öğrendim."
-               data-en="I learned to plan a software project, develop it with AI assistance, and document it on GitHub.">
-              Bir yazılım projesini planlamayı,
-              yapay zekâ desteğiyle geliştirmeyi
-              ve GitHub üzerinden belgelemeyi öğrendim.
+            <p
+              data-tr="Yazılım geliştirme sürecini planlamayı, yapay zekâ çıktılarının doğruluğunu değerlendirmeyi ve projeyi GitHub üzerinden belgelemeyi öğrendim."
+              data-en="I learned to plan software development, evaluate AI-generated outputs, and document a project using GitHub.">
+
+              Yazılım geliştirme sürecini
+              planlamayı, yapay zekâ çıktılarının
+              doğruluğunu değerlendirmeyi ve
+              projeyi GitHub üzerinden
+              belgelemeyi öğrendim.
+
             </p>
 
-            <a class="project-link"
-               href="https://github.com/eyllozdemir/PharmaDose"
-               target="_blank" rel="noopener noreferrer"
-               data-tr="GitHub'da Görüntüle"
-               data-en="View on GitHub">
+
+            <a
+              class="project-link"
+              href="https://github.com/eyllozdemir/PharmaDose"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-tr="GitHub'da Görüntüle"
+              data-en="View on GitHub">
+
               GitHub'da Görüntüle
+
             </a>
+
           </div>
+
         </article>
 
-        <!-- PROJECT 2 -->
-        <article class="project-card" data-category="algorithm"
-                 data-search="algorithm flowchart expiry date son kullanma tarihi algoritma">
 
-          <div class="project-image" role="img"
-               aria-label="Algoritma akış şeması simgesi">
+        <!-- =================================
+             PROJECT 2 - EXPIRY ALGORITHM
+             ================================= -->
+
+        <article
+          class="project-card"
+          data-category="algorithm"
+          data-search="algorithm flowchart expiry date son kullanma tarihi algoritma pharmacy">
+
+          <div
+            class="project-image"
+            role="img"
+            aria-label="İlaç son kullanma tarihi algoritması simgesi">
+
             <span aria-hidden="true">🔄</span>
+
           </div>
 
+
           <div class="project-content">
-            <h3 data-tr="İlaç Son Kullanma Tarihi Algoritması"
-                data-en="Medication Expiry Date Algorithm">
+
+            <h3
+              data-tr="İlaç Son Kullanma Tarihi Algoritması"
+              data-en="Medication Expiry Date Algorithm">
+
               İlaç Son Kullanma Tarihi Algoritması
+
             </h3>
 
-            
-          <p
-           data-tr="Eczanedeki ilaçları son kullanma tarihlerine göre dört kategoriye ayıran bir algoritma ve akış şeması geliştirdim. Eksik veya hatalı tarihleri manuel kontrole yönlendirdim."
-            data-en="I developed an algorithm and flowchart that classify pharmacy medications into four expiry-date categories. Missing or invalid dates are flagged for manual review.">
-            Eczanedeki ilaçları son kullanma tarihlerine
-             göre dört kategoriye ayıran bir algoritma
-            ve akış şeması geliştirdim. Eksik veya hatalı
-            tarihleri manuel kontrole yönlendirdim.
-          </p>
+
+            <p
+              data-tr="Eczanedeki ilaçların son kullanma tarihlerini kontrol eden bir algoritma ve akış şeması geliştirdim. İlaçları tarihi geçmiş, tarihi yaklaşıyor, uygun ve manuel kontrol gerekli kategorilerine ayırdım."
+              data-en="I developed an algorithm and flowchart to check medication expiry dates in a pharmacy. Medications are classified as expired, approaching expiry, valid, or requiring manual review.">
+
+              Eczanedeki ilaçların son kullanma
+              tarihlerini kontrol eden bir
+              algoritma ve akış şeması geliştirdim.
+              İlaçları tarihi geçmiş, tarihi
+              yaklaşıyor, uygun ve manuel kontrol
+              gerekli kategorilerine ayırdım.
+
+            </p>
 
 
-            <h4 data-tr="Ne Öğrendim?"
-                data-en="What I Learned">
+            <h4
+              data-tr="Ne Öğrendim?"
+              data-en="What I Learned">
               Ne Öğrendim?
             </h4>
 
-            
-<p
-  data-tr="Girdi-işlem-çıktı analizi, koşullar, döngüler, sözde kod, akış şeması ve hata durumlarını ele almayı öğrendim."
-  data-en="I learned input-process-output analysis, conditions, loops, pseudocode, flowcharts, and handling exceptional cases.">
-  Girdi-işlem-çıktı analizi, koşullar,
-  döngüler, sözde kod, akış şeması
-  ve hata durumlarını ele almayı öğrendim.
-</p>
 
+            <p
+              data-tr="Girdi-işlem-çıktı analizi, koşullu kararlar, döngüler, sözde kod ve akış şeması oluşturmayı öğrendim. Eksik veya hatalı veriler için kontrol mekanizmaları tasarladım."
+              data-en="I learned input-process-output analysis, conditional decisions, loops, pseudocode, and flowchart design. I also designed checks for missing or invalid data.">
 
-            <!-- Gercek GitHub baglantisi eklenecek -->
-            <p class="project-pending"
-               data-tr="GitHub bağlantısı hazırlanıyor."
-               data-en="GitHub link will be added.">
-              GitHub bağlantısı hazırlanıyor.
+              Girdi-işlem-çıktı analizi,
+              koşullu kararlar, döngüler,
+              sözde kod ve akış şeması
+              oluşturmayı öğrendim.
+              Eksik veya hatalı veriler için
+              kontrol mekanizmaları tasarladım.
+
             </p>
+
+
+            <p
+              class="project-pending"
+              data-tr="GitHub bağlantısı eklenecek."
+              data-en="GitHub link will be added.">
+
+              GitHub bağlantısı eklenecek.
+
+            </p>
+
           </div>
+
         </article>
 
-        
-<!-- PROJECT: PYTHON AND GITHUB -->
 
-<article class="project-card"
-         data-category="coding"
-         data-search="python github readme merhaba yaş hesaplama age calculator">
+        <!-- =================================
+             PROJECT 3 - PYTHON AND GITHUB
+             ================================= -->
 
-  <div class="project-image" role="img"
-       aria-label="Python programlama projesi simgesi">
-    <span aria-hidden="true">🐍</span>
-  </div>
+        <article
+          class="project-card"
+          data-category="coding"
+          data-search="python github readme merhaba yaş hesaplama age calculator">
 
-  <div class="project-content">
+          <div
+            class="project-image"
+            role="img"
+            aria-label="Python programlama projesi simgesi">
 
-    <h3
-      data-tr="Python ile Yaş Hesaplama ve GitHub"
-      data-en="Python Age Calculator and GitHub">
-      Python ile Yaş Hesaplama ve GitHub
-    </h3>
+            <span aria-hidden="true">🐍</span>
 
-    <p
-      data-tr="GEP1316 Ödev 2 kapsamında Markdown kullanarak bir README dosyası hazırladım ve Python ile kullanıcıdan ad ve doğum yılı alan, yaş hesaplayan bir program geliştirdim. Gelecekteki doğum yılları için koşullu kontrol ekledim."
-      data-en="For GEP1316 Assignment 2, I created a README file using Markdown and developed a Python program that asks for a user's name and birth year, calculates age, and checks for future birth years.">
-      GEP1316 Ödev 2 kapsamında Markdown kullanarak
-      bir README dosyası hazırladım ve Python ile
-      kullanıcıdan ad ve doğum yılı alan, yaş
-      hesaplayan bir program geliştirdim.
-      Gelecekteki doğum yılları için koşullu
-      kontrol ekledim.
-    </p>
-
-    <h4 data-tr="Ne Öğrendim?"
-        data-en="What I Learned">
-      Ne Öğrendim?
-    </h4>
-
-    <p
-      data-tr="Python'da input(), int(), datetime ve if–else yapılarını kullanmayı; Markdown ile proje belgelemeyi, terminalde test yapmayı ve GitHub commit geçmişi oluşturmayı öğrendim."
-      data-en="I learned to use input(), int(), datetime, and if–else in Python, document projects with Markdown, test programs in the terminal, and maintain a GitHub commit history.">
-      Python'da input(), int(), datetime ve
-      if–else yapılarını kullanmayı; Markdown
-      ile proje belgelemeyi, terminalde test
-      yapmayı ve GitHub commit geçmişi
-      oluşturmayı öğrendim.
-    </p>
-
-    <a class="project-link"
-       href="https://github.com/eyllozdemir/gep1316-portfolyo"
-       target="_blank"
-       rel="noopener noreferrer"
-       data-tr="GitHub'da Görüntüle"
-       data-en="View on GitHub">
-      GitHub'da Görüntüle
-    </a>
-
-  </div>
-</article>
-
-
-        <!-- PROJECT 3: PORTFOLIO DEMO -->
-        <article class="project-card" data-category="web"
-                 data-search="academic portfolio html css javascript web">
-
-          <div class="project-image" role="img"
-               aria-label="Web portfolyo simgesi">
-            <span aria-hidden="true">🌐</span>
           </div>
+
 
           <div class="project-content">
-            <h3>Academic Portfolio</h3>
 
-            <p data-tr="HTML, CSS ve JavaScript kullanarak geliştirdiğim iki dilli kişisel portfolyo sitesi."
-               data-en="My bilingual personal portfolio website developed using HTML, CSS, and JavaScript.">
-              HTML, CSS ve JavaScript kullanarak
-              geliştirdiğim iki dilli kişisel
-              portfolyo sitesi.
+            <h3
+              data-tr="Python ile Yaş Hesaplama ve GitHub"
+              data-en="Python Age Calculator and GitHub">
+
+              Python ile Yaş Hesaplama ve GitHub
+
+            </h3>
+
+
+            <p
+              data-tr="GEP1316 Ödev 2 kapsamında Markdown ile README dosyası hazırladım ve Python kullanarak ad ve doğum yılı bilgileriyle yaş hesaplayan bir program geliştirdim. Gelecekteki doğum yılları için hata kontrolü ekledim."
+              data-en="For GEP1316 Assignment 2, I created a README file using Markdown and developed a Python program that calculates age from a name and birth year. I added validation for future birth years.">
+
+              GEP1316 Ödev 2 kapsamında
+              Markdown ile README dosyası
+              hazırladım ve Python kullanarak
+              ad ve doğum yılı bilgileriyle
+              yaş hesaplayan bir program geliştirdim.
+              Gelecekteki doğum yılları için
+              hata kontrolü ekledim.
+
             </p>
 
-            <h4 data-tr="Ne Öğrendim?"
-                data-en="What I Learned">
+
+            <h4
+              data-tr="Ne Öğrendim?"
+              data-en="What I Learned">
               Ne Öğrendim?
             </h4>
 
-            <p data-tr="Responsive tasarım, erişilebilir HTML, JavaScript etkileşimleri ve GitHub Pages ile yayınlamayı öğrendim."
-               data-en="I learned responsive design, accessible HTML, JavaScript interactions, and publishing with GitHub Pages.">
-              Responsive tasarım, erişilebilir HTML,
-              JavaScript etkileşimleri ve GitHub Pages
-              ile yayınlamayı öğrendim.
+
+            <p
+              data-tr="Python'da input(), int(), datetime ve if–else yapılarını kullanmayı öğrendim. Ayrıca terminalde program çalıştırmayı, Markdown ile dokümantasyon hazırlamayı ve GitHub commit geçmişini yönetmeyi deneyimledim."
+              data-en="I learned to use input(), int(), datetime, and if–else in Python. I also gained experience running programs in the terminal, writing Markdown documentation, and managing GitHub commits.">
+
+              Python'da input(), int(),
+              datetime ve if–else yapılarını
+              kullanmayı öğrendim.
+              Ayrıca terminalde program çalıştırmayı,
+              Markdown ile dokümantasyon
+              hazırlamayı ve GitHub commit
+              geçmişini yönetmeyi deneyimledim.
+
             </p>
 
-            <a class="project-link"
-               href="https://github.com/eyllozdemir/academic-portfolio"
-               target="_blank" rel="noopener noreferrer"
-               data-tr="GitHub'da Görüntüle"
-               data-en="View on GitHub">
+
+            <a
+              class="project-link"
+              href="https://github.com/eyllozdemir/gep1316-portfolyo"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-tr="GitHub'da Görüntüle"
+              data-en="View on GitHub">
+
               GitHub'da Görüntüle
+
             </a>
+
           </div>
+
         </article>
+
+
+        <!-- =================================
+             PROJECT 4 - ACADEMIC PORTFOLIO
+             ================================= -->
+
+        <article
+          class="project-card"
+          data-category="web"
+          data-search="academic portfolio html css javascript web design">
+
+          <div
+            class="project-image"
+            role="img"
+            aria-label="Academic Portfolio web sitesi simgesi">
+
+            <span aria-hidden="true">🌐</span>
+
+          </div>
+
+
+          <div class="project-content">
+
+            <h3>Academic Portfolio</h3>
+
+
+            <p
+              data-tr="HTML, CSS ve JavaScript kullanarak geliştirdiğim, Türkçe ve İngilizce dil seçeneklerine sahip, mobil uyumlu kişisel akademik portfolyo sitesi."
+              data-en="A responsive bilingual academic portfolio website developed using HTML, CSS, and JavaScript.">
+
+              HTML, CSS ve JavaScript kullanarak
+              geliştirdiğim, Türkçe ve İngilizce
+              dil seçeneklerine sahip,
+              mobil uyumlu kişisel akademik
+              portfolyo sitesi.
+
+            </p>
+
+
+            <h4
+              data-tr="Ne Öğrendim?"
+              data-en="What I Learned">
+              Ne Öğrendim?
+            </h4>
+
+
+            <p
+              data-tr="HTML ile sayfa yapısı oluşturmayı, CSS ile responsive tasarım geliştirmeyi, JavaScript ile etkileşim eklemeyi ve GitHub Pages kullanarak web sitesi yayınlamayı öğrendim."
+              data-en="I learned to structure pages with HTML, create responsive layouts with CSS, add interactivity with JavaScript, and publish websites using GitHub Pages.">
+
+              HTML ile sayfa yapısı oluşturmayı,
+              CSS ile responsive tasarım geliştirmeyi,
+              JavaScript ile etkileşim eklemeyi
+              ve GitHub Pages kullanarak
+              web sitesi yayınlamayı öğrendim.
+
+            </p>
+
+
+            <a
+              class="project-link"
+              href="https://github.com/eyllozdemir/academic-portfolio"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-tr="GitHub'da Görüntüle"
+              data-en="View on GitHub">
+
+              GitHub'da Görüntüle
+
+            </a>
+
+          </div>
+
+        </article>
+
 
       </div>
 
-      <p class="project-note"
-         data-tr="Diğer ders projelerim doğrulandıktan sonra bu bölüme eklenecektir."
-         data-en="Additional coursework projects will be added after verification.">
-        Diğer ders projelerim doğrulandıktan
-        sonra bu bölüme eklenecektir.
+
+      <!-- ADDITIONAL PROJECTS NOTE -->
+
+      <p
+        class="project-note"
+        data-tr="Diğer ders projelerim tamamlandıkça bu bölüme eklenecektir."
+        data-en="Additional coursework projects will be added as they are completed.">
+
+        Diğer ders projelerim tamamlandıkça
+        bu bölüme eklenecektir.
+
       </p>
 
+
     </section>
+
   </main>
 
+
+  <!-- =====================================
+       FOOTER
+       ===================================== -->
+
   <footer class="site-footer">
+
     <p>© 2026 Eylül Sena Özdemir</p>
-    <a href="https://github.com/eyllozdemir"
-       target="_blank" rel="noopener noreferrer">GitHub</a>
+
+    <a
+      href="https://github.com/eyllozdemir"
+      target="_blank"
+      rel="noopener noreferrer">
+
+      GitHub
+
+    </a>
+
   </footer>
 
 </body>
 </html>
+
+
